@@ -1,0 +1,47 @@
+<template name="MVP" description="Creates a new MVP classes" format="5" revision="1">
+    <category value="Other" />
+    <formfactor value="Mobile" />
+
+    <parameter
+        id="activityClass"
+        name="Activity Name"
+        type="string"
+        constraints="class|unique|nonempty" />
+
+    <parameter
+        id="fragmentClass"
+        name ="Fragment Name"
+        type="string"
+        suggest="${underscoreToCamelCase(classToResource(activityClass))}Fragment"
+        constraints="class|unique|nonempty"/>
+
+    <parameter
+        id="layoutName"
+        name="Layout Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        suggest="fragment_${classToResource(fragmentClass)}"/>
+
+    <parameter
+        id="viewName"
+        name="View Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        suggest="${underscoreToCamelCase(classToResource(fragmentClass))}View"/>
+
+    <parameter
+        id="presenterName"
+        name="Presenter Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        suggest="${underscoreToCamelCase(classToResource(fragmentClass))}Presenter"/>
+
+    <parameter
+        id="packageName"
+        name="Package name"
+        type="string"
+        constraints="package"/>
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+</template>
