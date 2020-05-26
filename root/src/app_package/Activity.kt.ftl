@@ -1,7 +1,7 @@
 package ${packageName};
 
-import ${applicationPackage}.common.base.BaseActivity
-import ${applicationPackage}.common.base.BaseFragment
+import com.steve.utilities.core.ui.BaseActivity
+import com.steve.utilities.core.ui.BaseFragment
 
 class ${activityClass} : BaseActivity() {
 

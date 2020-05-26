@@ -16,4 +16,6 @@
     <instantiate from="root/src/app_package/Presenter.kt.ftl"
         to="${escapeXmlAttribute(srcOut)}/${presenterName}.kt" />
 
+    <merge from="root/AndroidManifest.xml.ftl"
+        to="${escapeXmlAttribute(manifestOut)}/AndroidManifest.xml"/>
 </recipe>

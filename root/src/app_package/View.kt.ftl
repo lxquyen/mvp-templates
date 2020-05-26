@@ -1,5 +1,5 @@
 package ${packageName}
-import ${applicationPackage}.common.base.BaseView
+import com.steve.utilities.core.ui.BaseView
 
 interface ${viewName} : BaseView{
 }

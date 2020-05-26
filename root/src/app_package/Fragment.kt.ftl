@@ -1,9 +1,8 @@
 package ${packageName}
 
 import ${applicationPackage}.R
-import ${applicationPackage}.common.base.BaseFragment
-import ${applicationPackage}.common.base.BasePresenter
-import ${applicationPackage}.common.di.component.AppComponent
+import com.steve.utilities.core.ui.BaseFragment
+import com.steve.utilities.core.ui.BasePresenter
 import javax.inject.Inject
 
 class ${fragmentClass} : BaseFragment<${viewName}, ${presenterName}>(), ${viewName}{
@@ -11,8 +10,7 @@ class ${fragmentClass} : BaseFragment<${viewName}, ${presenterName}>(), ${viewNa
     @Inject
     lateinit var presenter: ${presenterName}
 
-    override fun inject(appComponent: AppComponent) {
-        appComponent.inject(this)
+    override fun inject() {
     }
 
     override fun presenter(): BasePresenter<${viewName}>? {
