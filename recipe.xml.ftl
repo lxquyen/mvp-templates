@@ -1,8 +1,10 @@
 <?xml version="1.0"?>
 <recipe>
 
-    <instantiate from="root/src/app_package/Activity.kt.ftl"
-        to="${escapeXmlAttribute(srcOut)}/${activityClass}.kt" />
+    <#if isGenerated>
+        <instantiate from="root/src/app_package/Activity.kt.ftl"
+            to="${escapeXmlAttribute(srcOut)}/${activityClass}.kt" />
+    </#if>
 
     <instantiate from="root/src/app_package/Fragment.kt.ftl"
         to="${escapeXmlAttribute(srcOut)}/${fragmentClass}.kt" />

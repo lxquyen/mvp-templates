@@ -2,7 +2,7 @@
 
     <application>
 
-        <#if isLauncher>
+        <#if isLauncher && isGenerated>
         <activity android:name="${packageName}.${activityClass}">
                 <intent-filter>
                     <action android:name="android.intent.action.MAIN" />
@@ -11,7 +11,7 @@
         </activity>
         </#if>
 
-        <#if !isLauncher>
+        <#if !isLauncher && isGenerated>
         <activity android:name="${packageName}.${activityClass}"/>
         </#if>
     </application>

@@ -9,6 +9,12 @@
         constraints="class|unique|nonempty" />
 
     <parameter
+        id="isGenerated"
+        name="Generated Activity"
+        type="boolean"
+        default="true" />
+
+    <parameter
         id="fragmentClass"
         name ="Fragment Name"
         type="string"
